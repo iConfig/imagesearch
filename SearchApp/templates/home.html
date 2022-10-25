@@ -1,0 +1,49 @@
+<html>
+{% block contents %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+
+{% if messages %}
+{% for message in messages %}
+{% if message.tag == "success" %}
+<div id="mes" >
+<span id="msg-success" >{{message}}</span>
+{% else %}  
+<span id="msg-error" >{{message}}</span>
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+<br><br>
+<div id="search-div">
+<h2> Image Search </h2><br>
+<form method="post">
+   
+
+    {% csrf_token %}
+    {{form.as_p}}<br>
+    <button type="submit">search</button>
+</form>
+</div>
+<br><br><br>
+
+
+    {% if image_name or image_title or image_url %}
+    <div id="result">
+    <div>
+        <p>Image Name : {{image_name}}</p>
+        <p>Image Title: {{image_title}}</p>
+        <p>Image Url: <a href="{{image_url}}"></a></p>
+    </div>
+    </div>
+    {% endif %}
+
+
+{% endblock %}
+
+</html>

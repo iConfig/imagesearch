@@ -1,0 +1,49 @@
+#search-div{
+    margin: auto;
+    width: 60%;
+    background-color: rgb(234, 221, 206);
+    text-align: center;
+    padding: 10px;
+}
+h2{
+    color: rgb(35, 144, 222);
+}
+#mes{
+    margin: auto;
+    width: 60%;
+    background-color: rgb(234, 221, 206);
+    text-align: center;
+    padding: 10px;
+}
+
+#msg-success{
+    color: green;
+}
+
+#msg-error{
+    color: red;
+}
+
+
+form{
+    width: 80%;
+
+}
+
+form #id_name{
+    width: 50%;
+    align-items: center;
+}
+
+button{
+    width: 100px;
+    align-items: center;
+}
+
+#result{
+    margin: auto;
+    width: 60%;
+    background-color: rgb(234, 221, 206);
+    /* text-align: center; */
+    padding: 10px;
+}
